@@ -41,6 +41,6 @@ public class MyAccountPage {
 	
 	public void Assert_NameOnAccount(String FirstName, String LastName) {
 		String FullName = FirstName + " " + LastName;
-		assertEquals(FullName, NameOnAccount.getText());
+		AssertEquals(FullName, NameOnAccount.getText());
 	}
 }
