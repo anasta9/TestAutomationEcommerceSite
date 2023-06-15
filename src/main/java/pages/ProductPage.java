@@ -33,44 +33,44 @@ public class ProductPage extends BasePage {
 	WebElement ProductPrice;
 
 	// InteractiveMethods
-	public void Enter_Quantity(String quantity) {
+	public void enterQuantity(String quantity) {
 		Quantity_Wanted.clear();
 		Quantity_Wanted.sendKeys(quantity);
 	}
 
-	public void Select_Size(String Size) {
-		SelectFromDropdownByVisibleText(Size_Selection, Size);
+	public void selectSize(String Size) {
+		selectFromDropdownByVisibleText(Size_Selection, Size);
 	}
 
-	public void Select_Color() {
+	public void selectColor() {
 		Select_Color.click();
 	}
 
-	public void Click_AddToCart_Button() {
+	public void clickAddToCartButton() {
 		AddToCart_Button.click();
 	}
 
-	public void Click_ProceedToCheckout_Button() {
+	public void clickProceedToCheckoutButton() {
 		ProceedToCheckout_Button.click();
 	}
 
-	public void Click_IncreaseQuantity_Button() {
+	public void clickIncreaseQuantityButton() {
 		IncreaseQuantity_Button.click();
 	}
 
-	public void TestTotalCalculation() throws InterruptedException {
+	public void testTotalCalculation() throws InterruptedException {
 
-		double DblCurrentTotal = ConvertStringToDouble(TotalProductPrice);
+		double dblCurrentTotal = convertStringToDouble(TotalProductPrice);
 		
-		Click_IncreaseQuantity_Button();
+		clickIncreaseQuantityButton();
 		
-		double DblProductPrc = ConvertStringToDouble(ProductPrice);
+		double dblProductPrc = convertStringToDouble(ProductPrice);
 
 		Thread.sleep(2000);
 
-		double DblModifiedTotal = ConvertStringToDouble(TotalProductPrice);
+		double dblModifiedTotal = convertStringToDouble(TotalProductPrice);
 		
-		if (DblCurrentTotal + DblProductPrc == DblModifiedTotal) {
+		if (DblCurrentTotal + dblProductPrc == dblModifiedTotal) {
 			System.out.println("Success! the calculation is correct");
 		} else {
 			System.out.println("Failure, the calculation is wrong");

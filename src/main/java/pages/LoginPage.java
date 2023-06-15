@@ -23,31 +23,31 @@ public class LoginPage extends BasePage{
 	@FindBy(how = How.XPATH, using = "//div[@id='create_account_error']/ol/li") WebElement InvalidEmail_Alert_Text;
 	
 	//InteractiveMethods
-	public void Enter_EMail_Address(String Email) {
+	public void enterEMailAddress(String Email) {
 		Email_Address_Field.sendKeys(Email);
 	}
 	
-	public void Enter_Password(String Password) {
+	public void enterPassword(String Password) {
 		Password_Field.sendKeys(Password);
 	}
 	
-	public void Click_Signin_Button() {
+	public void clickSigninButton() {
 		SignIn_Button.click();
 	}
 	
-	public void Click_CreateAnAccount_Button() {
+	public void clickCreateAnAccountButton() {
 		CreateAnAccount_Button.click();
 	}
 	
-	public void Fill_CreatAccountEmail_Field() {
-		CreatAccountEmail_Field.sendKeys(Random_Number_Generator() + "." + Random_Number_Generator() + "user@email.com");
+	public void fillCreatAccountEmailField() {
+		CreatAccountEmail_Field.sendKeys(randomNumberGenerator() + "." + randomNumberGenerator() + "user@email.com");
 	}
 
-	public void Fill_CreatAccount_WithInvalidEmail_Field(String email) {
+	public void fillCreatAccountWithInvalidEmailField(String email) {
 		CreatAccountEmail_Field.sendKeys(email);
 	}
 
-	public void Verify_CreatAccount_WithInvalidEmail_Field() {
+	public void verifyCreatAccountWithInvalidEmailField() {
 		
 		if(InvalidEmail_Alert_Text.isDisplayed() == true) {
 			System.out.println("Success! Alert for invalid email was displayed");

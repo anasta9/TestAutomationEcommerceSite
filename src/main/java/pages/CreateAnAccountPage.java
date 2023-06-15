@@ -36,89 +36,89 @@ public class CreateAnAccountPage extends BasePage {
 	@FindBy(how = How.XPATH, using = "//button[@id='submitAccount']") WebElement Register_Button;
 	@FindBy(how = How.XPATH, using = "//div[@id=\"center_column\"]/div/p") WebElement ErrorAlertForMandatoryFields;
 	
-	public void Click_Mr_RadioButton() {
+	public void clickMrRadioButton() {
 		Mr_RadioButton.click();
 	}
 	
-	public void Fill_FirstName_Field(String FirstName) {
+	public void fillFirstNameField(String FirstName) {
 		FirstName_Field.sendKeys(FirstName);
 	}
 	
-	public void Fill_LastName_Field(String LastName) {
+	public void fillLastNameField(String LastName) {
 		LastName_Field.sendKeys(LastName);
 	}
 	
-	public void Fill_Password_Field(String Password) {
+	public void fillPasswordField(String Password) {
 		Password_Field.sendKeys(Password);
 	}
 	
-	public void SelectDay_Selection(String day) {
+	public void selectDaySelection(String day) {
 		
-		SelectFromDropdownByValue(Day_Selection, RemoveDecimalPoint(day));
+		selectFromDropdownByValue(Day_Selection, removeDecimalPoint(day));
 	}
 	
-	public void SelectMonth_Selection(String month) {
-		SelectFromDropdownByValue(Month_Selection, month);
+	public void selectMonthSelection(String month) {
+		selectFromDropdownByValue(Month_Selection, month);
 	}
 	
-	public void SelectYear_Selection(String year) {
-		SelectFromDropdownByValue(Year_Selection, RemoveDecimalPoint(year));
+	public void electYearSelection(String year) {
+		selectFromDropdownByValue(Year_Selection, removeDecimalPoint(year));
 	}
 	
-	public void Click_Newsletter_CheckBox() {
+	public void clickNewsletterCheckBox() {
 		Newsletter_CheckBox.click();
 	}
 	
-	public void Click_SpecialOffer_CheckBox() {
+	public void clickSpecialOfferCheckBox() {
 		SpecialOffer_CheckBox.click();
 	}
 	
-	public void Fill_Address_FirstName_Field(String aFirstName) {
+	public void fillAddressFirstNameField(String aFirstName) {
 		Address_FirstName_Field.sendKeys(aFirstName);
 	}
 	
-	public void Fill_Address_LastName_Field(String aLastName) {
+	public void fillAddressLastNameField(String aLastName) {
 		Address_LastName_Field.sendKeys(aLastName);
 	}
 	
-	public void Fill_Address_Company_Field(String Company) {
+	public void fillAddressCompanyField(String Company) {
 		Address_Company_Field.sendKeys(Company);
 	}
 
-	public void Fill_Address1_Field(String Address) {
+	public void fillAddress1Field(String Address) {
 		Address1_Field.sendKeys(Address);
 	}
 
-	public void Fill_City_Field(String City) {
+	public void fillCityField(String City) {
 		City_Field.sendKeys(City);
 	}
 
-	public void Select_State_Field(String State) {
-		SelectFromDropdownByVisibleText(State_Field, State);
+	public void selectStateField(String State) {
+		selectFromDropdownByVisibleText(State_Field, State);
 	}
 
-	public void Fill_ZipCode_Field(String ZipCode) {
-		ZipCode_Field.sendKeys(RemoveDecimalPoint(ZipCode));
+	public void fillZipCodeField(String ZipCode) {
+		ZipCode_Field.sendKeys(removeDecimalPoint(ZipCode));
 	}
 
-	public void Select_Country_Field(String Country) {
-		SelectFromDropdownByVisibleText(Country_Field, Country);
+	public void selectCountryField(String Country) {
+		selectFromDropdownByVisibleText(Country_Field, Country);
 	}
 
-	public void Fill_CellPhone_Field() {
-		CellPhone_Field.sendKeys(Phone_Number_Generator());
+	public void fillCellPhoneField() {
+		CellPhone_Field.sendKeys(phoneNumberGenerator());
 	}
 	
-	public void Fill_AliasAddress_Field(String alias) {
+	public void fillAliasAddressField(String alias) {
 		AliasAddress_Field.clear();
 		AliasAddress_Field.sendKeys(alias);
 	}
 
-	public void Click_Register_Button() {
+	public void clickRegisterButton() {
 		Register_Button.click();
 	}
 
-	public void VerifyErrorAlertForMandatoryFields() {
+	public void verifyErrorAlertForMandatoryFields() {
 		
 		if(ErrorAlertForMandatoryFields.isDisplayed() == true) {
 			System.out.println("Success! Error Alert For Mandatory Fields is displayed");

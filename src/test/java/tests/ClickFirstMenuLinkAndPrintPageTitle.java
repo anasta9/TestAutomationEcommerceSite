@@ -31,25 +31,25 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 	 */
 	//Starting Browser
 	@BeforeMethod
-	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+	public void startBrowser() {
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	//the actual test
 	@Test
-	public void ClickFirstMenuLinkAndPrintPageTitleTest() {
+	public void clickFirstMenuLinkAndPrintPageTitleTest() {
 
 		MainPage MainP = PageFactory.initElements(driver, MainPage.class);
 		// 4. Get the page title and print it.
-		String MainPageTitle = MainP.GetPageTitle();
+		String MainPageTitle = MainP.getPageTitle();
 		System.out.println(MainPageTitle);
 
 		// 5. Now, click on first menu link say "Contact us"
-		MainP.Click_ContactUS_Button();
+		MainP.clickContactUSButton();
 
 		// 6. Get the page title and print it.
 		ContactUsPage contactus = PageFactory.initElements(driver, ContactUsPage.class);
-		String ContactUsPageTitle = contactus.GetPageTitle();
+		String ContactUsPageTitle = contactus.getPageTitle();
 		System.out.println(ContactUsPageTitle);
 		// 7. Navigate back to Home Page.
 		driver.navigate().back();
@@ -67,8 +67,8 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 	// 9. Close the browser.
 	// Closing browser
 	@AfterMethod
-	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+	public void closeBrowser() {
+		BrowserFactory.closeBrowser();
 	}
 
 }

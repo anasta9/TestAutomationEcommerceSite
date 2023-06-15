@@ -21,20 +21,20 @@ public class TshirtsPage {
 	@FindBy(how = How.XPATH, using = "//p[@class='fancybox-error']")WebElement wishlist_ErrorBox;
 	
 	//InteractiveMethods
-	public void Hover_Over_Product() {
+	public void hoverOverProduct() {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(Product_Image).perform();
 	}
 	
-	public void Click_More_Button_Product_One() {
+	public void clickMoreButtonProductOne() {
 		More_Button_Product_One.click();
 	}
 	
-	public void Click_wishlistProduct() {
+	public void clickwishlistProduct() {
 		wishlistProduct.click();
 	}
 	
-	public void Verify_wishlist_ErrorBox() {
+	public void verifyWishlistErrorBox() {
 		if(wishlist_ErrorBox.getText().contains("You must be logged in to manage your wishlist.")) {
 			System.out.println("Success! Error message displayed");
 		}else {

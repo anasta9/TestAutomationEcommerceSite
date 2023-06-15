@@ -25,24 +25,24 @@ public class MainPage {
 	WebElement ContactUs_Button;
 
 	// InteractiveMethods
-	public void ClickOnSignInButton() {
+	public void clickOnSignInButton() {
 		Sign_in_Button.click();
 	}
 	
-	public void Hover_Over_Women_Button() {
+	public void hoverOverWomenButton() {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(Women_Button).perform();
 	}
 
-	public void Click_Tshirts_Button() {
+	public void clickTshirtsButton() {
 		Tshirts_Button.click();
 	}
 	
-	public String GetPageTitle() {
+	public String getPageTitle() {
 		return driver.getTitle();
 	}
 	
-	public void Click_ContactUS_Button() {
+	public void clickContactUSButton() {
 		ContactUs_Button.click();
 	}
 
