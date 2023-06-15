@@ -23,12 +23,12 @@ public class LoginPage extends BasePage{
 	@FindBy(how = How.XPATH, using = "//div[@id='create_account_error']/ol/li") WebElement invalidEmailAlertText;
 	
 	//InteractiveMethods
-	public void enterEMailAddress(String Email) {
-		emailAddressField.sendKeys(Email);
+	public void enterEMailAddress(String email) {
+		emailAddressField.sendKeys(email);
 	}
 	
-	public void enterPassword(String Password) {
-		passwordField.sendKeys(Password);
+	public void enterPassword(String password) {
+		passwordField.sendKeys(password);
 	}
 	
 	public void clickSigninButton() {
