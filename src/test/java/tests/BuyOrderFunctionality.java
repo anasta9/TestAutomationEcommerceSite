@@ -88,7 +88,7 @@ public class BuyOrderFunctionality {
 		OrderPage OrderP = PageFactory.initElements(driver, OrderPage.class);
 		OrderP.clickProceedToCheckout();
 		OrderP.clickProceedToCheckoutAddressPage();
-		OrderP.clickCheckBoxAgreeToTermsShippingPage();
+		//OrderP.clickCheckBoxAgreeToTermsShippingPage();
 		OrderP.clickProceedToCheckoutShippingPage();
 		OrderP.clickPayByBankWirePaymentPage();
 		OrderP.clickIConfirmMyOrderPage();

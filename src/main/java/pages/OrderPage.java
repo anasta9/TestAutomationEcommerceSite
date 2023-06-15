@@ -29,7 +29,7 @@ public class OrderPage {
 		ProceedToCheckout_Button.click();
 	}
 
-	public void clickProceedToCheckoutAddress_Page() {
+	public void clickProceedToCheckoutAddressPage() {
 		ProceedToCheckout_Button_Address_Page.click();
 	}
 
@@ -37,7 +37,7 @@ public class OrderPage {
 		ProceedToCheckout_Button_Shipping_Page.click();
 	}
 
-	public void click_heckBoxAgreeToTermsShipping_Page() {
+	public void click_heckBoxAgreeToTermsShippingPage() {
 		CheckBox_AgreeToTerms_Shipping_Page.click();
 	}
 

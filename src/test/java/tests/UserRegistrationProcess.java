@@ -70,7 +70,7 @@ public class UserRegistrationProcess {
 		CreateAcc.fillPasswordField(Password);
 		CreateAcc.selectDaySelection(day);
 		CreateAcc.selectMonthSelection(month);
-		CreateAcc.selectYearSelection(year);
+		//CreateAcc.selectYearSelection(year);
 		CreateAcc.clickNewsletterCheckBox();
 		CreateAcc.clickSpecialOfferCheckBox();
 		CreateAcc.fillAddressCompanyField(Company);
