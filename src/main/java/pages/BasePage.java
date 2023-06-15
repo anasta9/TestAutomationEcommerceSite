@@ -9,13 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BasePage {
 
 	public int randomNumberGenerator() {
-		int randNum = (int) (Math.random() * 999 + 100);
-		return randNum;
+
+		return (int) (Math.random() * 999 + 100);
 	}
 
 	public int dateNumberGenerator() {
-		int randNum = (int) (Math.random() * 31 + 1);
-		return randNum;
+		return (int) (Math.random() * 31 + 1);
 	}
 
 	public String phoneNumberGenerator() {
