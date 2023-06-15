@@ -37,7 +37,7 @@ public class OrderPage {
 		proceedToCheckoutButtonShippingPage.click();
 	}
 
-	public void click_heckBoxAgreeToTermsShippingPage() {
+	public void clickCheckBoxAgreeToTermsShippingPage() {
 		checkBoxAgreeToTermsShippingPage.click();
 	}
 

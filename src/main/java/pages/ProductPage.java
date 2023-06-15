@@ -38,8 +38,8 @@ public class ProductPage extends BasePage {
 		quantityWanted.sendKeys(quantity);
 	}
 
-	public void selectSize(String Size) {
-		selectFromDropdownByVisibleText(sizeSelection, Size);
+	public void selectSize(String size) {
+		selectFromDropdownByVisibleText(sizeSelection, size);
 	}
 
 	public void selectColor() {

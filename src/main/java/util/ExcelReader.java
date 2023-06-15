@@ -34,20 +34,20 @@ public class ExcelReader {
 	public String getCellData(String sheetName, String colName, int rowNum) {
 		// For Sheet
 		int index = workbook.getSheetIndex(sheetName);
-		int col_Num = 0;
+		int colNum = 0;
 		sheet = workbook.getSheetAt(index);
 
 		// For Row
 		row = sheet.getRow(0);
 		for (int i = 0; i < row.getLastCellNum(); i++) {
 			if (row.getCell(i).getStringCellValue().trim().equals(colName.trim())) {
-				col_Num = i;
+				colNum = i;
 			}
 		}
 
 		// For Column
 		row = sheet.getRow(rowNum - 1);
-		cell = row.getCell(col_Num);
+		cell = row.getCell(colNum);
 		//return cell.getStringCellValue();
 
 		// ------------------------------------

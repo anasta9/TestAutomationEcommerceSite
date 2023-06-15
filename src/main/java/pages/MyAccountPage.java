@@ -38,9 +38,9 @@ public class MyAccountPage {
 		orderHistoryAndDetailsButton.click();
 	}
 	
-	public void assertEquals(String FirstName, String LastName) {
-		String FullName = FirstName + " " + LastName;
-		assertEquals(FullName, nameOnAccount.getText());
+	public void assertEquals(String firstName, String lastName) {
+		String fullName = firstName + " " + lastName;
+		assertEquals(fullName, nameOnAccount.getText());
 	}
 
 	
