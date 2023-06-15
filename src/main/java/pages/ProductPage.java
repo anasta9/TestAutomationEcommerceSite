@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 public class ProductPage extends BasePage {
 
 	WebDriver driver;
-	double DblCurrentTotal;
+	double dblCurrentTotal;
 
 	public ProductPage(WebDriver driver) {
 		this.driver = driver;
