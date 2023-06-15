@@ -70,7 +70,7 @@ public class ProductPage extends BasePage {
 
 		double dblModifiedTotal = convertStringToDouble(TotalProductPrice);
 		
-		if (DblCurrentTotal + dblProductPrc == dblModifiedTotal) {
+		if (dblCurrentTotal + dblProductPrc == dblModifiedTotal) {
 			System.out.println("Success! the calculation is correct");
 		} else {
 			System.out.println("Failure, the calculation is wrong");
