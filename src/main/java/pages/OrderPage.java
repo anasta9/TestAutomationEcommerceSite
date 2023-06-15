@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class OrderPage {
 	
@@ -55,10 +57,12 @@ public class OrderPage {
 	
 	public void assertOrderConfirmation() {
 		
+		Logger logger = LoggerFactory.getLogger(OrderPage.class);
+		
 		if(orderConfirmation.getText().contains("complete")) {
-			System.out.println("Order Verified");
+			logger.info("Order Verified");
 		}else {
-			System.out.println("Order not completed");
+			logger.info("Order not completed");
 		}
 		
 	}
