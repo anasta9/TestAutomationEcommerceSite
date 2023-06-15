@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class OrderPage {
+	Logger logger = LoggerFactory.getLogger(OrderPage.class);
 	
 	WebDriver driver;
 	
@@ -57,7 +58,7 @@ public class OrderPage {
 	
 	public void assertOrderConfirmation() {
 		
-		Logger logger = LoggerFactory.getLogger(OrderPage.class);
+		
 		
 		if(orderConfirmation.getText().contains("complete")) {
 			logger.info("Order Verified");

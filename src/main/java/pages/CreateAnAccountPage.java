@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import exo.Main;
 
 public class CreateAnAccountPage extends BasePage {
-
+	Logger logger = LoggerFactory.getLogger(CreateAnAccountPage.class);
 	WebDriver driver;
 	
 	public CreateAnAccountPage(WebDriver driver) {
@@ -123,9 +123,9 @@ public class CreateAnAccountPage extends BasePage {
 	}
 
 	public void verifyErrorAlertForMandatoryFields() {
-		Logger logger = LoggerFactory.getLogger(CreateAnAccountPage.class);
 		
-		if(errorAlertForMandatoryFields.isDisplayed() == true) {
+		
+		if(errorAlertForMandatoryFields.isDisplayed() ) {
 			logger.info("Success! Error Alert For Mandatory Fields is displayed");
 		}else {
 			logger.info("Failure, Error Alert For Mandatory Fields is not displayed");

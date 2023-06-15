@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LoginPage extends BasePage{
+	Logger logger = LoggerFactory.getLogger(LoginPage.class);
 
 	WebDriver driver;
 	
@@ -50,7 +51,7 @@ public class LoginPage extends BasePage{
 	}
 
 	public void verifyCreatAccountWithInvalidEmailField() {
-		Logger logger = LoggerFactory.getLogger(LoginPage.class);
+		
 		
 		if(invalidEmailAlertText.isDisplayed() == true) {
 			logger.info("Success! Alert for invalid email was displayed");

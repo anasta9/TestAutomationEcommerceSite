@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ProductPage extends BasePage {
+	Logger logger = LoggerFactory.getLogger(ProductPage.class);
 
 	WebDriver driver;
 	double dblCurrentTotal;
@@ -61,7 +62,7 @@ public class ProductPage extends BasePage {
 	}
 
 	public void testTotalCalculation() throws InterruptedException {
-		Logger logger = LoggerFactory.getLogger(ProductPage.class);
+		
 
 		double dblCurrentTotal = convertStringToDouble(totalProductPrice);
 		

@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class TshirtsPage {
+	Logger logger = LoggerFactory.getLogger(TshirtsPage.class);
 	
 	WebDriver driver;
 	
@@ -38,7 +39,7 @@ public class TshirtsPage {
 	
 	public void verifyWishListErrorBox() {
 		
-		Logger logger = LoggerFactory.getLogger(TshirtsPage.class);
+		
 		if(wishlistErrorBox.getText().contains("You must be logged in to manage your wishlist.")) {
 			logger.info("Success! Error message displayed");
 		}else {
